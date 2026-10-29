@@ -12,3 +12,7 @@ Comparing similar players through a) usage percentage, b) audience player skill 
 3. Do the stats back how much he gets paid?
 4 year, 190 mil - clippers
 4 year, 212 mil - 76ers
+
+Ways to scrape data:
+https://pypi.org/project/nba-api/
+https://jaebradley.github.io/basketball_reference_web_scraper/development/
