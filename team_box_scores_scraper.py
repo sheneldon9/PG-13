@@ -4,9 +4,10 @@ import time
 from zoneinfo import ZoneInfo
 import pandas as pd
 
+# Exporting all game box scores for a specified team in a given year
 results = []
-team = Team.LOS_ANGELES_CLIPPERS
-for year in range(2020, 2025):
+team = Team.ENTER_NAME
+for year in range(START_YEAR, END_YEAR + 1):
     season = client.season_schedule(season_end_year=year)
     for game in season:
         if team not in (game["away_team"], game["home_team"]):
@@ -15,7 +16,7 @@ for year in range(2020, 2025):
         local = game["start_time"].astimezone(ZoneInfo("America/New_York"))
 
         day_rows = client.team_box_scores(day=local.day, month=local.month, year=local.year)
-        time.sleep(15 * len(day_rows)/2)
+        time.sleep(5 * len(day_rows)/2)
 
         team_row = None
         opp_row = None
@@ -30,4 +31,4 @@ for year in range(2020, 2025):
         results.append({"date": local.date(), "team": team_row, "opponent": opp_row})
 
 df = pd.json_normalize(results, sep="_")
-df.to_csv("clippers_2020_2024.csv", index=False)
+df.to_csv("file_name.csv", index=False)
