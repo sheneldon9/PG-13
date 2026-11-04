@@ -1,7 +1,7 @@
 import sqlite3
 import pandas as pd
 
-conn = sqlite3.connect('georgpa01.db')
+conn = sqlite3.connect('PLAYER.db')
 
 conn.executescript("""
 DROP TABLE IF EXISTS team_pace;
@@ -18,7 +18,7 @@ PACE REAL
 );
 """)
 
-seasons = range(2012, 2019+1)
+seasons = range(START_YEAR, END_YEAR + 1)
 for year in seasons:
     raw = pd.read_csv(f"./team_box/{year}.csv")
     raw.to_sql(f"team_box_raw_{year}", conn, if_exists='replace', index=False)
