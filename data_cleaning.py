@@ -1,12 +1,12 @@
 import sqlite3
 import pandas as pd
 
-conn = sqlite3.connect('georgpa01.db')
+conn = sqlite3.connect('PLAYER.db')
 
 conn.executescript("""
-DROP TABLE IF EXISTS georgpa01_box_scores_clean_100;
+DROP TABLE IF EXISTS PLAYER_box_scores_clean_100;
 
-CREATE TABLE georgpa01_box_scores_clean_100 (
+CREATE TABLE PLAYER_box_scores_clean_100 (
 season INTEGER,
 game_type TEXT,
 date TEXT,
@@ -20,7 +20,7 @@ game_score REAL
 );
 """)
 
-player = "georgpa01"
+player = "PLAYER"
 reg_raw = pd.read_csv(f"./regular/{player}_basic.csv")
 reg_raw.to_sql(f"{player}_box_reg_raw", conn, if_exists='replace', index=False)
 po_raw = pd.read_csv(f"./playoffs/{player}_basic.csv")
