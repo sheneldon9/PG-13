@@ -12,9 +12,10 @@ Adjusted shooting will be a better comparison statistic
 2. How does his production and cap hit per year compare to other star players?  
 Compare with other players through **a)** usage percentage, **b)** salary cap hit to see if he is more or less bang for the buck
 - Consistently top 10 in yearly salary since 2018
-- Usage percentage around 30% since 2014
+- Usage percentage around 30% since 2014  
+According to basketball reference
 
-Ways to scrape data:
+Data Sources:
 - https://pypi.org/project/nba-api/
 - https://jaebradley.github.io/basketball_reference_web_scraper/development/
 
