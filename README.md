@@ -1,6 +1,6 @@
 # Pandemic P
 
-1. Was Playoff P a statistically real thing and is it still a thing now?
+1. Was Playoff P a statistically real thing and is it still a thing now?  
 Did his stats rise/drop/stay the same come playoff time?
 ### Basic Stats:
 - Points, Rebounds, Assists, TOV, eFG% (Per 100 possessions)  
@@ -9,7 +9,7 @@ Use for initial comparisons - box and whisker for regular season, individual dot
 - PER, TS%, OWS, DWS, WS/48, OBPM, DBPM, VORP/WORP  
 Adjusted shooting will be a better comparison statistic
 
-2. How does his production and cap hit per year compare to other star players?
+2. How does his production and cap hit per year compare to other star players?  
 Compare with other players through **a)** usage percentage, **b)** salary cap hit to see if he is more or less bang for the buck
 - Consistently top 10 in yearly salary since 2018
 - Usage percentage around 30% since 2014
