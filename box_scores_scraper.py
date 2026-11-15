@@ -3,7 +3,7 @@ import time
 from basketball_reference_web_scraper import client
 from basketball_reference_web_scraper.errors import InvalidPlayerAndSeason
 
-# Exporting all basic regular and playoff game box scores up to this year (2027)
+# Exporting all basic regular and playoff game box scores up to this last year (2026)
 reg = []
 po = []
 for year in range(START_YEAR, 2027):
@@ -22,4 +22,4 @@ for year in range(START_YEAR, 2027):
 # Time delay to avoid Basketball-Reference request limit
 
 pd.DataFrame(reg).to_csv("PLAYERID_basic.csv", index=False)
-pd.DataFrame(po).to_csv("PLAYERID_basic.csv", index=False)
+pd.DataFrame(po).to_csv("PLAYERID_pobasic.csv", index=False)
